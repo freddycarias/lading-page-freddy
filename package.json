@@ -1,0 +1,19 @@
+{
+  "name": "lading-page-freddy",
+  "version": "1.0.0",
+  "description": "this is my lading page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freddycarias/lading-page-freddy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freddycarias/lading-page-freddy/issues"
+  },
+  "homepage": "https://github.com/freddycarias/lading-page-freddy#readme"
+}
