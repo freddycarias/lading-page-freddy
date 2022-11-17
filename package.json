@@ -4,7 +4,7 @@
   "description": "this is my lading page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "deploy": "gh-pages -d src"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/freddycarias/lading-page-freddy/issues"
   },
-  "homepage": "https://github.com/freddycarias/lading-page-freddy#readme"
+  "homepage": "https://github.com/freddycarias/lading-page-freddy#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }

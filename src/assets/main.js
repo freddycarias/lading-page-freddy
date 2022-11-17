@@ -1,4 +1,4 @@
-const API = 'https://youtube-v31.p.rapidapi.com/search?channelId=UC9if4liux3lgg4KzVfTx_0A&part=snippet%2Cid&order=date&maxResults=1';
+const API = 'https://youtube-v31.p.rapidapi.com/search?channelId=UC9if4liux3lgg4KzVfTx_0A&part=snippet%2Cid&order=date&maxResults=2';
 
 const content = null || document.getElementById("content")
 
@@ -12,8 +12,8 @@ const options = {
 
 async function  fetchdata (urlApi){
     const response = await fetch(urlApi,options);
-    const data = await response.json();
-    return data
+    return response.json();
+    
 }
 
 (async () => {
@@ -24,7 +24,7 @@ async function  fetchdata (urlApi){
         <div class="group relative">
             <div
                 class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
-                <img src="${video.snippet.thumbnail.high.url}" alt="${video.snippet.description}" class="w-full">
+                <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.description}" class="w-full"> 
             </div>
             <div class="mt-4 flex justify-between">
                 <h3 class="text-sm text-gray-700">
@@ -36,8 +36,27 @@ async function  fetchdata (urlApi){
         `).slice(0,1).join("")}
         
         `;
-    } catch (error) {
-        
+        content.innerHTML = view;
+    }catch {
+        throw new Error("API Not Found");
     }
 
 })();
+
+//RETO DE Playground: Crea una utilidad para hacer peticiones
+
+// const API = "https://youtube-v31.p.rapidapi.com/search?channelId=UC9if4liux3lgg4KzVfTx_0A&part=snippet%2Cid&order=date&maxResults=2"
+// export async function runCode(url) {
+//   try {
+//     new URL(url);
+//     const response = await fetch(url);
+//     return response.json();
+//   } catch (error) {
+//     if (error.message === "Failed to construct 'URL': Invalid URL") {
+//       throw new Error('Invalid URL');
+//     } else {
+//       throw new Error('Something was wrong');
+//     }
+//   }
+// }
+// runCode(API)
